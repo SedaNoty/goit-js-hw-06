@@ -15,8 +15,8 @@ const images = [
 
 
 const imageGallery = document.querySelector('.gallery')
-const galleryImg = images.map((element) =>`<li><img src='${element.url}' alt='${element.alt}' width = '150' height = '100'></li>`
-);
+const galleryImg = images.map((element) =>
+`<li><img src='${element.url}' alt='${element.alt}' width = '150' height = '100'></li>`);
 imageGallery.insertAdjacentHTML('beforeend', galleryImg);
 imageGallery.setAttribute('style', 'list-style-type: none; display: flex');
 imageGallery.innerHTML = galleryImg.join('');
