@@ -13,12 +13,16 @@ const images = [
   },
 ];
 
-
 const imageGallery = document.querySelector('.gallery')
-const galleryImg = images.map((element) =>
-`<li><img src='${element.url}' alt='${element.alt}' width = '150' height = '100'></li>`);
-imageGallery.insertAdjacentHTML('beforeend', galleryImg);
-imageGallery.setAttribute('style', 'list-style-type: none; display: flex');
-imageGallery.innerHTML = galleryImg.join('');
-console.log(imageGallery);
 
+const galleryImg = images.map(picture =>
+  `<li><img class="picture" src=${picture.url} width = '150' alt='${picture.alt}'></img></li>`)
+	.join('');
+
+imageGallery.insertAdjacentHTML('beforeend', galleryImg);
+
+imageGallery.style.display = 'flex';
+imageGallery.style.listStyle = 'none';
+imageGallery.style.gap = '20px';
+
+console.log(imageGallery);

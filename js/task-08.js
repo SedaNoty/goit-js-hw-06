@@ -13,7 +13,7 @@ function handleSubmit(event) {
     if (email.value === '' || password.value === '') {
         return alert('Заполните все поля!')
     }
-    const userData = { email: email.value, Password: password.value }
+    const userData = { email: email.value, password: password.value }
     
     console.log(userData)
     event.currentTarget.reset()
